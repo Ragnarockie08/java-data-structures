@@ -27,11 +27,11 @@ public class MinHeapTest {
 
         MinHeap heap = new MinHeap();
 
-        int[] array = new int[] {17, 25, 10, 5, 1, 34};
+        int[] array = new int[] {16, 5, 4, 2, 6};
         heap.build(array);
         heap.add(7);
 
-        String expected = "[1, 5, 7, 25, 10, 34, 17]";
+        String expected = "[2, 4, 5, 16, 6, 7]";
 
         assertEquals(expected, heap.toString());
     }
@@ -41,11 +41,11 @@ public class MinHeapTest {
 
         MinHeap heap = new MinHeap();
 
-        int[] array = new int[] {12, 13, 3, 24, 5};
+        int[] array = new int[] {2, 4, 5, 16, 6, 7};
         heap.build(array);
         heap.remove();
 
-        String expected = "[5, 13, 12, 24]";
+        String expected = "[4, 6, 5, 16, 7]";
 
         assertEquals(expected, heap.toString());
     }

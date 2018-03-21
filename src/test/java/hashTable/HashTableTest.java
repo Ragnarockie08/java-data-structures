@@ -13,8 +13,8 @@ public class HashTableTest {
 
         HashTable<String, Integer> table = new HashTable<>();
 
-        table.add("test1", 5);
-        table.add("test2", 10);
+        table.put("test1", 5);
+        table.put("test2", 10);
 
         String expected = "{test2=10, test1=5}";
 
@@ -26,10 +26,10 @@ public class HashTableTest {
 
         HashTable<String, Integer> table = new HashTable<>();
 
-        table.add("test1", 5);
-        table.add("test2", 10);
+        table.put("test1", 5);
+        table.put("test2", 10);
 
-        assertEquals(Integer.valueOf(10), table.getValue("test2"));
+        assertEquals(Integer.valueOf(10), table.get("test2"));
     }
 
     @Test
@@ -37,8 +37,8 @@ public class HashTableTest {
 
         HashTable<String, Integer> table = new HashTable<>();
 
-        table.add("test1", 5);
-        table.add("test2", 10);
+        table.put("test1", 5);
+        table.put("test2", 10);
 
         table.remove("test1");
 
@@ -50,8 +50,8 @@ public class HashTableTest {
 
         HashTable<String, Integer> table = new HashTable<>();
 
-        table.add("test1", 5);
-        table.add("test2", 10);
+        table.put("test1", 5);
+        table.put("test2", 10);
 
         table.clearAll();
 
