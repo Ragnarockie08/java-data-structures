@@ -1,4 +1,4 @@
-package hashTable;
+package hash_table;
 
 
 import org.junit.Test;
