@@ -37,7 +37,8 @@ public class MinHeap {
 
         int root = data[0];
 
-        data[0] = data[size];
+        data[0] = data[size-1];
+        size--;
         handleSwipDown();
 
         return root;
