@@ -9,7 +9,7 @@ public class MinHeap {
     private int[] data;
     private int size;
 
-    public MinHeap() {
+    MinHeap() {
         this.data = new int[INITIAL_SIZE];
         size = 0;
     }

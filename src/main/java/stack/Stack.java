@@ -9,7 +9,7 @@ public class Stack<T> {
     private int size;
     private int peekItem = -1;
 
-    public Stack(int initialSize) {
+    Stack(int initialSize) {
         this.capacity = initialSize;
         this.data = (T[]) new Object [initialSize];
     }
@@ -38,7 +38,7 @@ public class Stack<T> {
         return data[peekItem];
     }
 
-    public void checkSpace(){
+    private void checkSpace(){
         if (capacity - size < 1) {
             throw new IllegalArgumentException("No space left");
         }

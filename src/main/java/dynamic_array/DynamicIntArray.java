@@ -45,9 +45,12 @@ public class DynamicIntArray<E> {
     public boolean remove(int index){
 
         checkIndex(index);
-
-        for (int i = index; i < size(); i++) {
-            data[i] = data[i + 1];
+        if (index == data.length-1){
+            data[index] = null;
+        }else {
+            for (int i = index; i < size(); i++) {
+                data[i] = data[i + 1];
+            }
         }
         size--;
 

@@ -10,7 +10,7 @@ public class HashTable<K, V> {
     private LinkedList<HashNode<K, V>>[] array;
     private int size;
 
-    public HashTable() {
+    HashTable() {
         this.array = new LinkedList[INITIAL_SIZE];
         this.size = 0;
     }

@@ -22,6 +22,9 @@ public class StackTest {
 
         Stack stack = new Stack(2);
 
+        stack.push(1);
+        stack.push(2);
+
         assertEquals(2, stack.size());
 
     }
