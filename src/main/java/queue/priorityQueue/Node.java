@@ -1,4 +1,4 @@
-package queue;
+package queue.priorityQueue;
 
 public class Node<T> {
     private T value;

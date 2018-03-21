@@ -1,4 +1,4 @@
-package queue;
+package queue.priorityQueue;
 
 import java.util.NoSuchElementException;
 

@@ -1,8 +1,7 @@
-package queue;
+package queue.priorityQueue;
 
 import org.junit.Test;
-
-import java.util.NoSuchElementException;
+import queue.priorityQueue.CustomQueue;
 
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
