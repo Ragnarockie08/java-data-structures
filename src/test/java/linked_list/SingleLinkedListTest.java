@@ -22,6 +22,20 @@ public class SingleLinkedListTest {
     }
 
     @Test
+    public void testIndexAdd(){
+        SingleLinkedList linkedList = new SingleLinkedList();
+
+        linkedList.add(1);
+        linkedList.add(3);
+        linkedList.add(4);
+        linkedList.add(1, 2);
+
+        String expected = " 1 2 3 4";
+
+        assertEquals(expected, linkedList.toString());
+    }
+
+    @Test
     public void removeTest(){
 
         SingleLinkedList linkedList = new SingleLinkedList();

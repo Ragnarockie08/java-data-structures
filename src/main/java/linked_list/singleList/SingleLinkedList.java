@@ -46,21 +46,20 @@ public class SingleLinkedList<E> {
     public void add(int index, E value){
 
         Node<E> node = new Node<>(value);
-        Node elem = head;
 
         if (index == 0) {
             addAtBeggining(value);
         } else if(index == size){
             add(value);
         } else if (index > 0 && index < size){
-            for (int i = 1; i < size; i++){
-                if (i == index){
-                    Node temp = elem.getLink();
-                    elem.setLink(node);
-                    node.setLink(temp);
-                }
+            Node elem = head;
+            Node temp = elem;
+            for (int i = 0; i < index; i++){
+                temp = elem;
                 elem = elem.getLink();
             }
+            temp.setLink(node);
+            node.setLink(elem);
         } else {
             throw new ArrayIndexOutOfBoundsException();
         }
@@ -110,14 +109,11 @@ public class SingleLinkedList<E> {
     private void removeMiddle(int index){
 
         Node elem = head;
-        for (int i = 1; i < size()-1; i++){
-            if (i == index){
-                Node temp = elem.getLink();
-                temp = temp.getLink();
-                elem.setLink(temp);
-                break;
-            }
+        for (int i = 1; i < index; i++){
             elem = elem.getLink();
         }
+        Node temp = elem.getLink();
+        temp = temp.getLink();
+        elem.setLink(temp);
     }
 }
